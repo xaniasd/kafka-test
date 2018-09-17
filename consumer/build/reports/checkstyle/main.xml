@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.11">
-<file name="/Users/dimitris.stafylarakis/work/linkit/kafka/kafka-test/consumer/src/main/java/org/xanias/kafka/TestConsumer.java">
-<error line="18" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-</file>
-</checkstyle>
