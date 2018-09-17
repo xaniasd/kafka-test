@@ -1,0 +1,38 @@
+
+allprojects {
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "http://packages.confluent.io/maven/" }
+    }
+}
+
+subprojects {
+
+    group 'org.xanias'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'checkstyle'
+
+
+    sourceCompatibility = 1.8
+
+
+    checkstyle {
+        config = rootProject.resources.text.fromFile('buildConfig/checkstyle/checkstyle.xml')
+        toolVersion '8.11';
+    }
+
+    dependencies {
+        compile group: 'org.apache.kafka', name: 'kafka-clients', version: '2.0.0'
+        compile group: 'org.apache.avro', name: 'avro', version: '1.8.2'
+        compile group: 'io.confluent', name: 'kafka-avro-serializer', version: '4.1.0'
+        compile group: 'com.google.guava', name: 'guava', version: '19.0'
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+        compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.+'
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+
