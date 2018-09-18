@@ -2,6 +2,6 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'org.xanias.kafka.TestProducer'
+mainClassName = 'org.example.kafka.AvroProducer'
 
 
